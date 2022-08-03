@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\Home\Cartazs;
-use App\Http\Controllers\Home\conteudos;
+use App\Http\Controllers\Home\Conteudos;
 use App\Http\Controllers\Home\Palestras;
 use App\Http\Controllers\Home\ProjetosAlunos;
 use App\Http\Controllers\Home\Workshops;
