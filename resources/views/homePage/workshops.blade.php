@@ -26,8 +26,9 @@
                         @foreach ($workshops as $workshop)
                             <div class="flex flex-col items-center justify-center w-full max-w-lg mx-auto">
                                 @if (isset($workshop->ficheiro->filePath))
-                                    <img class="object-cover w-full rounded-mdmax-h-max"
-                                        src="{{ Storage::url($workshop->ficheiro->filePath) }}" alt="Image">
+                                    <img class="object-cover w-full rounded-mdmax-h-max" {{-- src="{{ Storage::url($workshop->ficheiro->filePath) }}" alt="Image"> --}}
+                                        src="{{ Storage::disk('s3')->response($workshop->ficheiro->filePath) }}"
+                                        alt="Image">
                                 @else
                                     <img class="object-cover w-full rounded-md max-h-max"
                                         src="{{ $workshop->ficheiro->link_principal }}" alt="Image">
