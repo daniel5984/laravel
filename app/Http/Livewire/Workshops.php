@@ -117,7 +117,8 @@ class Workshops extends Component
 
         $this->validate();
 
-        $image = $this->image->store('public/assets/workshops');
+        //$image = $this->image->store('public/assets/workshops');
+        $image = $this->image->storeAS('workshop/', $this->image->getClientOriginalName(), 's3');
 
         //$file = $request->file('avatar');
 
